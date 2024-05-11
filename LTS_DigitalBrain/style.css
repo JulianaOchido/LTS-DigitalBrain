@@ -1,0 +1,318 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.contact button{
+    padding: 10px 40px;
+    font-size: 23px;
+    font-weight: 600;
+    background-color: #3a37ff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+h2.titulo{
+    color: #FFF;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #3a37ff;
+}
+
+/*Header*/
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img{
+    height: 120px;
+}
+
+header a{
+    color: #7e6d6d;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #FFF;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.contact button:hover{
+    box-shadow: 0px 0px 30px #060461;
+    transform: scale(1.05);
+}
+
+/* Main */
+
+section.main-website{
+    padding: 40px 4%;
+}
+
+section.main-website .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.main-website h1{
+    color: #3a37ff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.animatedtxt{
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.animatedspan{
+    position: relative;
+}
+
+.animatedtxt .animatedspan::before{
+    content: "";
+    animation: identifier 20s infinite;
+}
+
+.animatedtxt .animatedspan::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #3a37ff;
+    right: -10px;
+    opacity: 1;
+    animation: pointer .8s infinite, writing 20s steps(15) infinite;
+    width: calc(100% + 15px);
+    background-color: #000;
+}
+
+@keyframes writing{
+    10%, 15%, 30%, 35%, 50%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 15px);
+    }
+}
+
+@keyframes pointer{
+    0%{
+        border-left: 2px solid #000;
+    }
+}
+
+@keyframes identifier{
+    0%, 20%{
+        content: "IS A DIGITAL BRAIN?";
+    }
+
+    21%, 40%{
+        content: "IS IT FOR?";
+    }
+    41%, 60%{
+        content: "IS A DIGITAL BRAIN?";
+    }
+    61%, 80%{
+        content: "IS IT FOR?";
+    }
+    81%, 100%{
+        content: "IS A DIGITAL BRAIN?";
+    }
+}
+
+.main-website h1:hover{
+    transform: scale(1.05);
+}
+
+.main-website .texts p{
+    font-size: 22px;
+    font-weight: 200;
+    color: #FFF;
+    margin: 40px 0;
+}
+
+.main-website .images img{
+    position: relative;
+    animation: fly 2s ease-in-out infinite alternate;
+}
+
+@keyframes fly{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+section.purposes{
+    padding: 40px 4%;
+}
+
+section.purposes .flex{
+    gap: 60px;
+}
+
+.purposes .purposes-box{
+    color: #FFF;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.purposes .purposes-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff75;
+}
+
+.purposes .purposes-box i{
+    font-size: 70px;
+    color: #3a37ff;
+}
+
+.purposes .purposes-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.page1{
+    background-color: #020224;
+}
+
+.page2{
+    background-color: #000000;
+}
+
+.rolling{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+footer{
+    position: absolute;
+    border-top: 0.5px solid #FFF;
+    background-color: #020224;
+    height: auto;
+    padding-top: 40px;
+    width: 100vw;
+    color: #FFF;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4 ease;
+}
+
+.socials a:hover i{
+    color: #3a37ff;
+}
+
+.footer-bottom{
+    background: #020224;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
